@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,9 +29,16 @@ public class RocketControllerC : MonoBehaviour
     }
 
     // OnMove 구현
-    // private void OnMove...
+    private void OnMove(InputValue value)
+    {
+        float direction = value.Get<Vector2>().x;
+        _rocketMovement.ApplyMovement(direction);
+    }
 
 
     // OnBoost 구현
-    // private void OnBoost...
+     private void OnBoost(InputValue value)
+    {
+        _rocketMovement.ApplyBoost();
+    }
 }
