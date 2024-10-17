@@ -15,10 +15,16 @@ public class RocketMovementC : MonoBehaviour
     // 개인 추가 작성 변수
     private float rotation = 0;
     private float angle = 0.0f;
+    private readonly float FUELUSE = 1.0f;
+
+    private EnergySystemC energySystem;
 
     private void Awake()
     {
         _rb2d = GetComponent<Rigidbody2D>();
+
+        //개인 추가 내용
+        energySystem = GetComponent<EnergySystemC>();
     }
 
     private void FixedUpdate()
@@ -39,7 +45,12 @@ public class RocketMovementC : MonoBehaviour
 
     public void ApplyBoost()
     {
-        _rb2d.AddForce(transform.up * SPEED, ForceMode2D.Impulse);
+        // [개인 추가 사항] 연료를 소비하도록 수정하였습니다.
+        if (energySystem.UseEnergy(FUELUSE))
+        {
+            // 기존 내용
+            _rb2d.AddForce(transform.up * SPEED, ForceMode2D.Impulse);
+        }
     }
 
     private void Rotate(float inputX)
