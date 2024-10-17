@@ -958,7 +958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0bf5b6e1ee4dcaa932291e0f45fa2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementSlotPrefab: {fileID: 0}
+  achievementSlotPrefab: {fileID: 4464448128941090489, guid: 190807b2180307f49bb18741e6426aca, type: 3}
+  contentTransform: {fileID: 1117076216}
 --- !u!114 &1023513700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,7 +1172,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 700, y: 1300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1117076217
 MonoBehaviour:
@@ -1186,15 +1187,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 50
+    m_Right: 50
+    m_Top: 50
+    m_Bottom: 50
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
+  m_CellSize: {x: 600, y: 200}
+  m_Spacing: {x: 0, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &1746022957
@@ -1241,9 +1242,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f72ce88fae4b9bab02f93ccec8ac62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievements: []
+  achievements:
+  - {fileID: 11400000, guid: de1bfeac7310e31479c7c0da8bc564b9, type: 2}
+  - {fileID: 11400000, guid: 6e6dbd3bf5772f94fb636cdbeb857a67, type: 2}
+  - {fileID: 11400000, guid: 532b3ab712d63b247bb3ed61b204e6cf, type: 2}
+  - {fileID: 11400000, guid: b703011123779d045a52aee88a631797, type: 2}
   achievementView: {fileID: 1023513699}
-  movementC: {fileID: 0}
 --- !u!1 &1770664202
 GameObject:
   m_ObjectHideFlags: 0
