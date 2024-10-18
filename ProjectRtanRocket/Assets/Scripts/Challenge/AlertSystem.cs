@@ -48,7 +48,12 @@ public class AlertSystem : MonoBehaviour
 
         if (isObstructionExist)
         {
-            Debug.Log("Obstuction!");
+            animator.SetBool(blinking, true);
+        }
+
+        else
+        {
+            animator.SetBool(blinking, false);
         }
     }
 }
