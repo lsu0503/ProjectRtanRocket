@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class RocketMovementC : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class RocketMovementC : MonoBehaviour
     public static Action<float> OnHighScoreChanged;
 
     // 개인 추가 작성 변수
-    private float rotation = 0;
-    private float angle = 0.0f;
+    private float interpolation = 0.0f;
+    private float input;
     private readonly float FUELUSE = 1.0f;
 
     private EnergySystemC energySystem;
@@ -25,6 +26,12 @@ public class RocketMovementC : MonoBehaviour
 
         //개인 추가 내용
         energySystem = GetComponent<EnergySystemC>();
+    }
+
+    private void Start()
+    {
+        interpolation = 0.5f;
+        input = 0.0f;
     }
 
     private void FixedUpdate()
@@ -56,12 +63,13 @@ public class RocketMovementC : MonoBehaviour
     private void Rotate(float inputX)
     {
         // 움직임에 따라 회전을 바꿈 -> 회전을 바꾸고 그 방향으로 발사를 해야 그쪽으로 가겠죠?
-        rotation = inputX;
+        input = inputX;
     }
 
     private void ApplyRotation()
     {
-        angle += rotation * ROTATIONSPEED;
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+        interpolation += input * ROTATIONSPEED;
+        interpolation = MathF.Min(1.0f, MathF.Max(0.0f, interpolation));
+        gameObject.transform.rotation = Quaternion.Slerp(Quaternion.Euler(0, 0, 45), Quaternion.Euler(0, 0, -45), interpolation);
     }
 }
