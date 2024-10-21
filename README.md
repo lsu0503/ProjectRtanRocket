@@ -1,6 +1,7 @@
 # ProjectRtanRocket
  ProjectRtanRocket
 
+**1st Week Daily practice**<br/>
 Q1. Action 기반 연료바 및 높이 업적 시스템 구현하기<br/>
 구현사항 0: [Import] Import Packages [Commit Id: 8a7ae4e (8a7ae4ef5efbbe8d4b2d8ea8008cad55363d3835)] <br/>
 구현사항 1: [Develop] Rocket Rotation & Boost [Commit Id: 43d3650 (43d3650f587d74bd9ce059c10ad855008b6bf5c6)] <br/>
@@ -15,3 +16,13 @@ Q3. 로켓 궤적 변경 기능 및 경보 기능 추가하기<br/>
 구현사항 1: [Develop] Improve Rotation System [Commit ID: 8fd0fe0 (8fd0fe06f8159c8698ebba6606eb0724a2f617ee)] <br/>
 구현사항 2: [Develop] Complete Simple AlertSystem [Commit ID: 9207272 (9207272a347cd9db0e6fdcba6856eee8dc785b08)] <br/>
 구현사항 3: [Develop] Improve AlertSystem [Commit ID: 0f08f99 (0f08f9925276576e5db0c6e4d8f75c48b55288a3)] <br/>
+
+**2nd Week Daily Practice**<br/>
+Q1. Input Rebinding
+구현사항 1: [Develop] Q1 - Details1 [Commit ID: b495a31 (b495a3180385ad5b1a1c033f51ed61134da65c33)] <br/>
+구현사항 2: [Develop] Q1 - Detail 2 [Commit ID: 5fa3b45 (5fa3b45a7432c3727046ff9ce738d48d1b1c84ea)] <br/>
+구현사항 3: [Develop] Q1 - Detail 3 [Commit ID: c7acdbe (c7acdbee9d4975c5803263d30130032770deccc3)] <br/>
+
+Q2. Generic Singleton
+구현사항 1: [Develop] Q2 Generic Singleton - Detail 1 [Commit ID: 675ee12 (675ee12248413b6db2c45e225be5c791cc4fafa8)] <br/>
+Unexpected Character Error Fix: [Fix] Fix error that Unexpected character '' [Commit ID: 6903431 (69034318e8ba8d262884ae987e32f12d09a4cf77)] <br/>
