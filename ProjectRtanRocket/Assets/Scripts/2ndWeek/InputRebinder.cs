@@ -17,6 +17,7 @@ public class InputRebinder : MonoBehaviour
     }
 
     // [구현사항 2] ContextMenu 어트리뷰트를 활용해서 인스펙터창에서 적용할 수 있도록 함
+    [ContextMenu("Rebind space to esc")]
     public void RebindSpaceToEscape()
     {
         if (spaceAction == null)
