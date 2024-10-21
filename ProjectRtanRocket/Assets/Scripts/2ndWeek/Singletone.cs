@@ -38,4 +38,3 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         // make it as dontdestroyobject        
     }
 }
-​
