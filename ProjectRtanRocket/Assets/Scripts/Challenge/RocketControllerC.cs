@@ -41,4 +41,9 @@ public class RocketControllerC : MonoBehaviour
     {
         _rocketMovement.ApplyBoost();
     }
+
+    private void OnSpace(InputValue value)
+    {
+        Debug.Log("Space has been pushed");
+    }
 }

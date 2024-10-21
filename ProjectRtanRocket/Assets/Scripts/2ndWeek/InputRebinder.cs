@@ -24,6 +24,7 @@ public class InputRebinder : MonoBehaviour
             return;
 
         // [구현사항 3] 기존 바인딩을 비활성화하고 새 키로 재바인딩
+        spaceAction.ApplyBindingOverride("<Keyboard>/escape");
 
         Debug.Log("Done!");
     }
