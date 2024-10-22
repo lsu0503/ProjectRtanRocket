@@ -35,6 +35,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     public void Awake()
     {
-        // make it as dontdestroyobject        
+        // make it as dontdestroyobject
+        DontDestroyOnLoad(this.transform.root.gameObject);
     }
 }
