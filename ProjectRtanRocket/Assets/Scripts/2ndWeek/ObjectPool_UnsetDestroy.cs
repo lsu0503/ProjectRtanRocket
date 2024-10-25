@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectPool_UnsetDestroy : MonoBehaviour
 {
-    private List<GameObject> pool;
+    [SerializeField] private List<GameObject> pool;
     private const int minSize = 0;
     private const int maxSize = 100;
     private int curIndex;
@@ -44,7 +44,7 @@ public class ObjectPool_UnsetDestroy : MonoBehaviour
         // [요구스펙 3] Release Object
         int targetIdx = pool.FindIndex(idx => ReferenceEquals(obj, idx));
 
-        if (curIndex >= maxSize)
+        if (curIndex > maxSize)
             Destroy(obj);
 
         else

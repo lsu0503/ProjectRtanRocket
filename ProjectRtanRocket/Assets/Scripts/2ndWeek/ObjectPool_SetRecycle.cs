@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectPool_SetRecycle : MonoBehaviour
 {
-    private List<GameObject> pool;
+    [SerializeField] private List<GameObject> pool;
     private const int minSize = 50;
     private const int maxSize = 300;
     private int curIndex;
@@ -31,8 +31,11 @@ public class ObjectPool_SetRecycle : MonoBehaviour
         // [요구스펙 2] Get Object
         GameObject returnObj;
 
-        if (curIndex < pool.Count)
+        if (curIndex < maxSize)
         {
+            if (curIndex >= pool.Count)
+                pool.Add(CreateObject());
+
             returnObj = pool[curIndex];
             curIndex++;
         }
@@ -43,7 +46,7 @@ public class ObjectPool_SetRecycle : MonoBehaviour
             pool.RemoveAt(0);
             pool.Add(returnObj);
         }
-        
+
         return returnObj;
     }
 
